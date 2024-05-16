@@ -1,37 +1,49 @@
 // Crear una función map que acepte un array y un callback y que:
 // • por cada elemento del array ejecute el callback pasándole dicho elemento como
-// argumento 
+// argumento
 // • obtenga el resultado
 // • lo pushee a un nuevo array
 // • devuelva el array final con el resultado de cada una de las llamadas al callback
 
 
-// aqui se creo una lista(funcion) donde se le estan pasando dos argumentos
-function mapa(array, callback) {
-    // aqui es la variable donde se van a almacenar los nuevos datos
-    let resultado = []
-    //for of iterar elemento en una lista
-    for(let num of array){
-        // aqui se envia a la lista 
-        resultado.push(callback(num))
-        
+// primos
+// const arreglo = [];
+
+// for (let i = 0; i < 3; i++) {
+//     let numero = prompt("Ingrese un número ");
+//     arreglo.push(parseInt(numero)); 
+// }
+
+// const operacion = (x) => {
+//     return x % 2 === 0; 
+// };
+// let final = arreglo.filter(operacion);
+// console.table(final);
+
+
+const funtionMap = () => {
+    let pushArray = [];
+  
+    for (let i = 0; i < Array.length; i++){
+      let resultado = callback(array[i]);
+      newArray.push(resultado);
     }
-    // se retorna a la funcion map
-    return resultado
-}
-
-// declarar una variable como una lista vacia 
-let lista = []
-//aqui se deja el ciclo para que repita 10 veces
-for(let i = 0; i<10;i++){
-    // estamos guardando los elementos en la lista
-    lista.push(parseInt(prompt("Ingrese un numero ")))
-}
-
-// almacenamos en la variable final el return de la funcion mapa 
-let final = mapa(lista, function(numero){
-    return numero * numero
-})
-
-console.log(final)
-
+  }
+  
+  let array = [1, 2, 3, 4, 5, 6]
+  
+  // ------------------------------------------------------------
+  
+  
+  console.clear
+  
+  let arreglo = [2, 3, 4, 5, 6];
+  
+  const operacion = (x) => {
+    return x * 2;
+  };
+  
+  let resultado = arreglo.map(operacion);
+  console.table(resultado);
+  
+  

@@ -1,34 +1,27 @@
-// aqui se creo una lista(funcion) donde se le estan pasando dos argumentos
-function filter(array, callback) {
-    // aqui es la variable donde se van a almacenar los nuevos datos
-    let resultado = []
-    //for of iterar elemento en una lista
-    for(let num of array){
-        // se hace la condicion del callback
-        if(callback(num)){
-            //aqui se envia a la lista
-            resultado.push(num)
-        }else{
-            continue;
-        }
-    }
-    return resultado
+// Crear una función filter que acepte un array y un callback y que:
+// • por cada elemento del array ejecute el callback pasándole dicho elemento como
+// argumento
+// • sí dicho callback devuelve true, pushea el elemento a un nuevo array
+// • devuelva el array final con los elementos que pasaron el "filtro".
+
+
+// const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+// const result = words.filter((word) => word.length > 6);
+
+// console.log(result);
+
+// ------------------------------------------
+
+console.clear
+
+let numeros = [1, 3, 6, 8, 10, 11]
+
+const operacion = (num) => {
+  // si usamos llaves, entonces necesitamos un return explícito
+  return num > 5;
 }
 
-// declarar una variable como una lista vacia 
-let lista = []
-for(let i = 0; i<10;i++){
-    lista.push(parseInt(prompt("Ingrese un numero ")))
-}
+let mostrar = numeros.filter(operacion)
+console.table(mostrar)
 
-// almacenamos en la variable final el return de la funcion filter 
-let final = filter(lista, function(numero){
-    
-    if(numero % 2 === 0){
-        return true;
-    } else{
-        return false;
-    }
-})
-
-console.log(final)

@@ -1,32 +1,28 @@
-function filter(array, callback) {
-    // aqui es la variable donde se van a almacenar los nuevos datos
-    let resultado = []
-    //for of iterar elemento en una lista
-    for(let num of array){
-        // se hace la condicion del callback
-        if(callback(num)){
-            
-            resultado.push(num)
-        }else{
-            continue;
-        }
-    }
-    return resultado
-}
+// Crear una función every que acepte un array y un callback y que:
+// • por cada elemento del array ejecute el callback pasándole dicho elemento como
+// argumento
+// • devuelva true si todas las llamadas al callback devolvieron true
 
 
-let lista = []
-for(let i = 0; i<10;i++){
-    lista.push(parseInt(prompt("Ingrese un numero ")))
-}
 
-let final = filter(lista, function(numero){
-    
-    if(numero % 2 === 0){
-        return true;
-    } else{
-        return false;
-    }
-})
+// function esSuficientementeGrande(elemento, indice, arrreglo) {
+//   return elemento >= 10;
+// }
+// [12, 5, 8, 130, 44].every(esSuficientementeGrande); // false
+// [12, 54, 18, 130, 44].every(esSuficientementeGrande); // true
 
-console.log(final)
+// // ------------------------------------------------------
+// console.clear()
+
+// se creo el arreglo 
+let arreglo = [1, 2, 3, 4, 5, 6,7];
+// se realiza la funcion 
+let proceso = (num) => {
+  return num % 2 === 0
+} 
+// se le asigna el arreglo a la variable y luego se le indica que va a realizar 
+let impimir = arreglo.every(proceso)  //el every revisa y con un false todo es falso
+console.log(impimir)  //false
+
+
+
