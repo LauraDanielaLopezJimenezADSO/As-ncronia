@@ -23,5 +23,8 @@ const handler = {
 const proxyObj = new Proxy(targetObj, handler);
 
 // Acceder a las propiedades del proxy
-console.log(proxyObj.name); // Esto imprimirá "Propiedad "name" está siendo leída." y luego "John"
-proxyObj.age = 35; // Esto imprimirá "Propiedad "age" está siendo modificada con el valor "35".
+// Esto imprimirá "Propiedad "name" está siendo leída." y luego "John"
+console.log(proxyObj.name); 
+
+ // Esto imprimirá "Propiedad "age" está siendo modificada con el valor "35".
+ proxyObj.age = 35;
