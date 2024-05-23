@@ -44,12 +44,12 @@ const obj = createValidatorProxy({
 });
 
 obj.age = 25; // Correcto
-obj.username = 'john123'; // Correcto
-obj.email = 'john@example.com'; // Correcto
-obj.birthDate = '1990-01-01'; // Correcto
+obj.username = 'lauralopez'; // Correcto
+obj.email = 'lauralopezjimenez12@gmail.com'; // Correcto
+obj.birthDate = '2005-12-28'; // Correcto
 
-obj.age = 'twenty'; // Error: El valor asignado a "age" debe ser numérico.
-obj.username = 'john 123'; // Error: El valor asignado a "username" debe ser alfanumérico.
-obj.email = 'john@example'; // Error: El valor asignado a "email" debe ser un correo válido.
-obj.birthDate = '01/01/1990'; // Error: El valor asignado a "birthDate" debe ser una fecha válida en formato YYYY-MM-DD.
-obj.username = ' john123 '; // Error: No se permiten espacios en blanco al inicio o al final de "username".
+obj.age = 'dieciocho'; // Error: El valor asignado a "age" debe ser numérico.
+obj.username = 'Laura lopez'; // Error: El valor asignado a "username" debe ser alfanumérico.
+obj.email = 'lauralopezjimenez12@gmail'; // Error: El valor asignado a "email" debe ser un correo válido.
+obj.birthDate = '2005/12/28'; // Error: El valor asignado a "birthDate" debe ser una fecha válida en formato YYYY-MM-DD.
+obj.username = ' lauralopez '; // Error: No se permiten espacios en blanco al inicio o al final de "username".
